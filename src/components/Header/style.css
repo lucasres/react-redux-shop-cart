@@ -1,0 +1,29 @@
+nav {
+    background: #40007F;
+    padding: 16px 0;
+}
+
+
+.title-nav {
+    color: #fff;
+    font-family: 'Satisfy', cursive;
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.bag-container {
+    float: right;
+}
+
+.bag-itens {
+    font-size: 12px;
+    position: relative;
+    top: -18px;
+    left: 28px;
+    background: #F20505;
+    padding: 2px;
+    border-radius: 50%;
+}
