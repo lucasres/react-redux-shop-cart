@@ -1,0 +1,23 @@
+.product-container {
+    width: 100%;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-photo {
+    background-size: contain;
+    height: 150px;
+    background-repeat: no-repeat;
+}
+
+.txt-container {
+    margin-left: 12px;
+    margin-bottom: 4px;
+}
+
+.btn-add{
+    padding: 12px;
+    text-align: center;
+    background: #40007F;
+}

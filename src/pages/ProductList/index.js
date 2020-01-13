@@ -2,11 +2,15 @@ import React from "react";
 import Layout from "../../components/Layout";
 import { Row, Col } from "react-grid-system";
 import InputSelect from "../../components/InputSelect";
+import { useSelector } from "react-redux";
+import ProductItem from "../../components/ProductItem";
 
 function ProductList() {
     function handleFilter(value) {
         console.log(value);
     }
+
+    const products = useSelector(state => state.product.data);
 
     return (
         <Layout>
@@ -26,6 +30,13 @@ function ProductList() {
                 <Col className="no-pd-mg">
                     <hr className="separetor"></hr>
                 </Col>
+            </Row>
+            <Row>
+                {products.map(product => (
+                    <Col md={3} key={product.id}>
+                        <ProductItem product={product} />
+                    </Col>
+                ))}
             </Row>
         </Layout>
     );
