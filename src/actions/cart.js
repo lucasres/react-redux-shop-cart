@@ -1,14 +1,15 @@
 const INITIAL_STATE_CART = {
+    total:0,
     data:[],
 }
 
 function handleAddCart(state,payload) {
+    let data = state.data;
+    data.push(payload);
     return {
         ...state,
-        data:[
-            ...state.data,
-            payload
-        ]
+        total:data.length,
+        data: data
     }
 }
 

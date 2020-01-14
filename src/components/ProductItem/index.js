@@ -6,12 +6,10 @@ import { useDispatch } from "react-redux";
 function ProductItem({product}) {
     const dispatch = useDispatch();
 
-    function handleInputCar(product) {
+    function handleInputCart(product) {
         dispatch({
             type: 'ADD_CART',
-            payload:{
-                product
-            }
+            payload:product
         })
     }
 
@@ -24,7 +22,7 @@ function ProductItem({product}) {
             <div className="txt-container">
                 <span>R$ {product.value}</span>
             </div>
-            <a className="btn-add" href="#" onClick={handleInputCar(product)}>Adicionar</a>
+            <div className="btn-add" href="#" onClick={()=>handleInputCart(product)}>Adicionar</div>
         </div>
     );
 }
